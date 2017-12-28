@@ -5,7 +5,7 @@ Plugin URI: http://employee451.com/
 Description: This plugin adds support for color scheme settings for Employee 451 Pixelarity themes.
 Author: Employee 451
 Author URI: http://employee451.com/
-Version: 0.0.1
+Version: 1.0
 GitHub Plugin URI: employee451/color-schemes-module
 */
 
