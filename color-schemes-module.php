@@ -5,7 +5,7 @@ Plugin URI: http://employee451.com/
 Description: This plugin adds support for color scheme settings for Employee 451 Pixelarity themes.
 Author: Employee 451
 Author URI: http://employee451.com/
-Version: 0.0.1
+Version: 1.0
 GitHub Plugin URI: employee451/color-schemes-module
 */
 
@@ -96,10 +96,10 @@ function generate_color_schemes( $default_hex_color, $color_schemes ) {
     $color_scheme_values = array();
 
     if( get_theme_mod( 'color_schemes_module_enable_custom' ) && get_theme_mod( 'color_schemes_module_custom' ) ) {
-      $color_scheme_values['color_scheme'] = str_replace( '#', '', get_theme_mod( 'color_schemes_module_custom', '#619be2' ) );
+      $color_scheme_values['color_scheme'] = str_replace( '#', '', get_theme_mod( 'color_schemes_module_custom', '#' . $default_hex_color ) );
       $color_scheme_values['rgb_color_scheme'] = hex2rgb( $color_scheme_values['color_scheme'] );
     } else {
-      $color_scheme_values['color_scheme'] = get_theme_mod( 'color_schemes_module_selector', '619be2' );
+      $color_scheme_values['color_scheme'] = get_theme_mod( 'color_schemes_module_selector', $default_hex_color );
       $color_scheme_values['rgb_color_scheme'] = hex2rgb( $color_scheme_values['color_scheme'] );
     }
 
